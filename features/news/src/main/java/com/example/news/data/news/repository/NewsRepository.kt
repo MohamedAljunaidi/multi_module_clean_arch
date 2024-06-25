@@ -15,14 +15,13 @@ class NewsRepository @Inject constructor(
 ) : INewsRepository {
 
     override fun getNews(
-        country: String, category: String, apiKey: String
+        country: String, category: String
     ): Flow<ResultWrapper<News?>> = flow {
         val result = tryRequest(
             request = {
                 newsService.getNews(
                     country = country,
                     category = category,
-                    apiKey = apiKey
                 )
             },
             dataToDomain = { response ->

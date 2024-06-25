@@ -79,7 +79,7 @@ class MainActivity : ComponentActivity() {
             ) {
                 Image(
                     painter = painterResource(id = R.drawable.ic_logo),
-                    contentDescription = "Localized description",
+                    contentDescription = "ic_logo",
                 )
             }
         }

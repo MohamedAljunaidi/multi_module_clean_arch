@@ -15,9 +15,6 @@ object Dependencies {
     const val lifeCycleRunTime =
         "androidx.lifecycle:lifecycle-runtime-compose-android:${DependencyVersions.life_cycle_runtime_ktx_version}"
 
-    const val lifeCycleRunTimeCompose =
-        "androidx.lifecycle:lifecycle-runtime-compose-android:${DependencyVersions.life_cycle_runtime_ktx_version}"
-
     const val activityCompose =
         "androidx.activity:activity-compose:${DependencyVersions.activity_compose}"
 
@@ -49,8 +46,6 @@ object Dependencies {
     const val hiltAndroid = "com.google.dagger:hilt-android:${DependencyVersions.hilt_version}"
     const val hiltCompilerKapt =
         "com.google.dagger:hilt-android-compiler:${DependencyVersions.hilt_version}"
-    const val hiltViewModel =
-        "androidx.hilt:hilt-lifecycle-viewmodel:${DependencyVersions.hilt_viewmodel_version}"
     const val hiltComposeCompilerKept =
         "androidx.hilt:hilt-compiler:${DependencyVersions.hilt_compose_compiler_version}"
     const val hiltNavigation =
@@ -65,9 +60,6 @@ object Dependencies {
 
     const val loggingInterceptor =
         "com.squareup.okhttp3:logging-interceptor:${DependencyVersions.okhttp_version}"
-
-    const val preferencesDataStore =
-        "androidx.datastore:datastore-preferences:${DependencyVersions.preferences_datastore_version}"
 
     const val coil =
         "io.coil-kt:coil-compose:${DependencyVersions.coil_version}"

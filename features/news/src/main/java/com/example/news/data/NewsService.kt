@@ -1,5 +1,6 @@
 package com.example.news.data
 
+import com.example.news.BuildConfig
 import com.example.news.data.news.model.NewsResponse
 import com.example.result.NetworkResult
 import com.example.services.ApiManager
@@ -19,13 +20,13 @@ class NewsService @Inject constructor(private val apiManager: ApiManager) {
 
 
     suspend fun getNews(
-        country: String, category: String, apiKey: String
+        country: String, category: String
     ): NetworkResult<NewsResponse> {
         return apiManager.getRequest(
             PATH_GET_NEWS, queryParamsMap = mapOf(
                 COUNTRY_PARAMS to country,
                 CATEGORY_PARAMS to category,
-                API_KEY to apiKey,
+                API_KEY to BuildConfig.API_KEY,
             )
         )
     }

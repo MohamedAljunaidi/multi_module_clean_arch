@@ -15,10 +15,8 @@ import kotlinx.coroutines.flow.onStart
 import javax.inject.Inject
 
 @HiltViewModel
-class NewsViewModel @Inject constructor(
-    private val getNewsUseCase: GetNewsUseCase,
-
-    ) : BaseViewModel() {
+class NewsViewModel @Inject constructor(private val getNewsUseCase: GetNewsUseCase) :
+    BaseViewModel() {
 
     private var _newsList: MutableStateFlow<ArrayList<News.Article>?> =
         MutableStateFlow(null)
@@ -35,7 +33,6 @@ class NewsViewModel @Inject constructor(
             val newsMap = mapOf(
                 GetNewsUseCase.COUNTRY_PARAMS to "us",
                 GetNewsUseCase.CATEGORY_PARAMS to "technology",
-                GetNewsUseCase.API_KEY_PARAMS to "b9a8fe3160024abd947e154333305311"
             )
 
             getNewsUseCase.invoke(newsMap)

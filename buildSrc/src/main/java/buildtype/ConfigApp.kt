@@ -25,7 +25,7 @@ object ConfigApp {
                 AppConfig.BuildConfigField.BASE_URL_KEY,
                 properties.getProperty(AppConfig.BuildConfigField.BASE_URL_VALUE)
             )
-            //SSO base URL
+            //API KEY URL
             buildConfigStringField(
                 AppConfig.BuildConfigField.API_KEY_KEY,
                 properties.getProperty(AppConfig.BuildConfigField.API_KEY_VALUE)

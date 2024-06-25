@@ -13,12 +13,10 @@ class GetNewsUseCase @Inject constructor(private val repository: INewsRepository
         companion object{
              const val COUNTRY_PARAMS = "country"
              const val CATEGORY_PARAMS = "category"
-             const val API_KEY_PARAMS = "apiKey"
         }
     override suspend fun invoke(params: Map<String, String>?): Flow<ResultWrapper<News?>> =
         repository.getNews(
             country = params?.get("country").toString(),
             category = params?.get("category").toString(),
-            apiKey = params?.get("apiKey").toString()
         )
 }

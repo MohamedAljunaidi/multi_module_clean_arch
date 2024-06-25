@@ -14,15 +14,15 @@ object DefaultConfig {
 
     fun initAppDefaultConfig(baseAppModuleExtension: BaseAppModuleExtension) {
         baseAppModuleExtension.apply {
-            compileSdk = AppConfig.AppConfigConstant.compileSdk
-            buildToolsVersion = AppConfig.AppConfigConstant.buildToolsVersion
+            compileSdk = AppConfig.AppConfigConstant.COMPILE_SDK
+            buildToolsVersion = AppConfig.AppConfigConstant.BUILD_TOOLS_VERSION
             defaultConfig {
-                versionCode = AppConfig.AppConfigConstant.versionCode
-                minSdk = AppConfig.AppConfigConstant.minSdk
+                versionCode = AppConfig.AppConfigConstant.VERSION_CODE
+                minSdk = AppConfig.AppConfigConstant.MIN_SDK
                 applicationId = AppConfig.AppConfigConstant.APPLICATION_ID
-                targetSdk = AppConfig.AppConfigConstant.targetSdk
-                versionName = AppConfig.AppConfigConstant.versionName
-                testInstrumentationRunner = AppConfig.AppConfigConstant.testInstrumentationRunner
+                targetSdk = AppConfig.AppConfigConstant.TARGET_SDK
+                versionName = AppConfig.AppConfigConstant.VERSION_NAME
+                testInstrumentationRunner = AppConfig.AppConfigConstant.TEST_INSTRUMENTATION_RUNNER
 
             }
             compileOptions {
@@ -40,10 +40,10 @@ object DefaultConfig {
 
     fun initLibraryDefaultConfig(libraryExtension: LibraryExtension) {
         libraryExtension.apply {
-            compileSdk = AppConfig.AppConfigConstant.compileSdk
+            compileSdk = AppConfig.AppConfigConstant.COMPILE_SDK
             defaultConfig {
-                minSdk = AppConfig.AppConfigConstant.minSdk
-                testInstrumentationRunner = AppConfig.AppConfigConstant.testInstrumentationRunner
+                minSdk = AppConfig.AppConfigConstant.MIN_SDK
+                testInstrumentationRunner = AppConfig.AppConfigConstant.TEST_INSTRUMENTATION_RUNNER
                 consumerProguardFiles("consumer-rules.pro")
             }
 

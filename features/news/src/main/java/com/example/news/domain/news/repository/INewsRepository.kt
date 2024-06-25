@@ -6,6 +6,6 @@ import kotlinx.coroutines.flow.Flow
 
 interface INewsRepository {
 
-    fun getNews(country: String, category: String, apiKey: String): Flow<ResultWrapper<News?>>
+    fun getNews(country: String, category: String): Flow<ResultWrapper<News?>>
 
 }

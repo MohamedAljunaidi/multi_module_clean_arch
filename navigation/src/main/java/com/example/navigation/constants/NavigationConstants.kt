@@ -6,7 +6,7 @@ object NavigationConstants {
 
     // news
      const val NEWS_PARAMS = "{news}"
-     const val NEWS_PATH = "homeScreenRoute"
+     const val NEWS_PATH = "newsScreenRoute"
      const val NEWS_DETAILS_PATH = "NewsDetailsRoute?news=$NEWS_PARAMS"
 
     // search

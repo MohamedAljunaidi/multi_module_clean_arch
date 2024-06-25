@@ -1,6 +1,5 @@
 package com.example.news.presentation.newsdetails
 
-import androidx.compose.foundation.clickable
 import androidx.compose.foundation.layout.Box
 import androidx.compose.foundation.layout.Column
 import androidx.compose.foundation.layout.Row
@@ -21,17 +20,13 @@ import androidx.compose.ui.Alignment
 import androidx.compose.ui.Modifier
 import androidx.compose.ui.draw.clip
 import androidx.compose.ui.graphics.RectangleShape
-import androidx.compose.ui.platform.LocalContext
 import androidx.compose.ui.text.style.TextOverflow
 import androidx.compose.ui.unit.dp
 import androidx.hilt.navigation.compose.hiltViewModel
-import androidx.navigation.compose.rememberNavController
 import coil.compose.AsyncImage
-import com.example.extension.getActivity
 import com.example.news.domain.news.model.News
 import com.example.theme.component.ScaffoldTopAppbar
 import com.example.theme.theme.color
-import com.google.gson.Gson
 
 @Composable
 internal fun NewsDetailsRoute(

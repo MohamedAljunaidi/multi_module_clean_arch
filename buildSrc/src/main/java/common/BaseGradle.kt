@@ -17,9 +17,6 @@ object BaseGradle {
     fun appGradle(baseAppModuleExtension: BaseAppModuleExtension, project: Project) {
         baseAppModuleExtension.apply {
             DefaultConfig.initAppDefaultConfig(baseAppModuleExtension = this)
-
-//            SignConfigApp.initSignConfig(baseAppModuleExtension = this, project = project)
-
             BuildTypeApp.initAppBuildType(baseAppModuleExtension = this, project = project)
         }
     }
@@ -28,8 +25,6 @@ object BaseGradle {
     fun libraryGradle(libraryExtension: LibraryExtension, project: Project) {
         libraryExtension.apply {
             DefaultConfig.initLibraryDefaultConfig(libraryExtension = this)
-//            SignConfigLibrary.initSignConfig(libraryExtension = this, project = project)
-
             BuildTypeLibrary.initLibraryBuildType(libraryExtension = this, project = project)
         }
     }
