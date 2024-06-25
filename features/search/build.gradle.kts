@@ -1,0 +1,78 @@
+import common.AppConfig
+import dependencies.Dependencies
+import dependencies.DependencyGroups
+import extensions.implementation
+import extensions.kapt
+
+plugins {
+    id("common.base-android-library")
+    id("dagger.hilt.android.plugin")
+    id("org.jetbrains.kotlin.android")
+}
+android {
+    namespace = "com.example.search"
+    compileOptions {
+        sourceCompatibility = JavaVersion.VERSION_1_8
+        targetCompatibility = JavaVersion.VERSION_1_8
+    }
+    kotlinOptions {
+        jvmTarget = "1.8"
+    }
+    buildFeatures {
+        compose = true
+    }
+    composeOptions {
+        kotlinCompilerExtensionVersion = "1.5.1"
+    }
+    defaultConfig {
+        vectorDrawables {
+            useSupportLibrary = true
+        }
+    }
+    packaging {
+        resources {
+            excludes += "/META-INF/{AL2.0,LGPL2.1}"
+        }
+    }
+}
+
+
+dependencies {
+
+    implementation(project(AppConfig.ModulePathsConstant.CORE))
+    implementation(project(AppConfig.ModulePathsConstant.NAVIGATION))
+    implementation(project(AppConfig.ModulePathsConstant.NETWORK))
+    implementation(project(AppConfig.ModulePathsConstant.THEME))
+
+    implementation(Dependencies.lifeCycleRunTime)
+    implementation(Dependencies.activityCompose)
+    implementation(Dependencies.composeBom)
+    implementation(Dependencies.composeUi)
+    implementation(Dependencies.composeUiGraphics)
+    implementation(Dependencies.composeToolingPreview)
+    implementation(Dependencies.composeMaterial3)
+    implementation(DependencyGroups.junitTestImplementationDependencies)
+    implementation(DependencyGroups.hiltDependencies)
+    implementation(Dependencies.navigation)
+    implementation(libs.lifecycle.runtime.ktx)
+    implementation(libs.activity.compose)
+    implementation(platform(libs.compose.bom))
+    implementation(libs.ui)
+    implementation(libs.ui.graphics)
+    implementation(libs.ui.tooling.preview)
+    implementation(libs.material3)
+    androidTestImplementation(platform(libs.compose.bom))
+    androidTestImplementation(libs.ui.test.junit4)
+    debugImplementation(libs.ui.tooling)
+    debugImplementation(libs.ui.test.manifest)
+    kapt(DependencyGroups.hiltKaptDependencies)
+
+    implementation(Dependencies.core)
+
+    androidTestImplementation(Dependencies.junitTestImplementation)
+    androidTestImplementation(Dependencies.espressoAndroidTestImplementation)
+    androidTestImplementation(platform(Dependencies.composeBom))
+    androidTestImplementation(Dependencies.composeUiTestJunit4)
+    androidTestImplementation(Dependencies.composeTooling)
+    androidTestImplementation(Dependencies.composeUiTestManifest)
+}
